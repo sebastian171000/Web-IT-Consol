@@ -1,0 +1,310 @@
+/*
+Theme Name: Web IT Console
+Theme URI: 
+Author: Fabiola Irene Cieza Romero
+Author URI: 
+Description: Theme diseñado exclusivamente para Web IT Console
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/glp-2.0.html
+Tags: tecnologia, flexbox, css grid, mobile first,
+Text Domain: webitconsole
+*/
+
+:root {
+    /**fuentes**/
+    --fuentePrincipal: 'Open Sans', sans-serif;
+    --fuenteTexto: 'Staatliches', cursive;
+    --fuenteSecundaria: 'Raleway', sans-serif;
+    /**colores*/
+    --azul: #00318a;
+    --verde: #92ba1f;
+    --grisClaro: #c4c4c4;
+    --grisOscuro: #393939;
+    --blancoSemiOscuro: #f5f5f5;
+    --blanco: #ffffff;
+    --negro: #0f0f0f;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*Now 10px= 1rem*/
+}
+
+body {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--fuentePrincipal);
+    overflow-x: hidden!important;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 3.6rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+
+/**globales**/
+
+p {
+    font-family: var(--fuentePrincipal);
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--fuentePrincipal);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    overflow: hidden!important;
+}
+
+.width100 {
+    width: 100%;
+}
+
+strong {
+    color: var(--colorPrimario);
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+/**header**/
+
+.hero-header {
+    background-color: var(--azul);
+}
+
+.hero-header a {
+    color: var(--blanco);
+}
+
+.hero-header p {
+    color: var(--blanco);
+    margin: 0;
+}
+
+.contenido-header-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0;
+}
+
+.contenido-header-superior i {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+i.fab.fa-twitter-square {
+    margin: 0;
+}
+
+.nav-idiomas {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-header-nav {
+    background-color: var(--blancoSemiOscuro);
+}
+
+.navegacion-principal a {
+    margin-right: 4rem;
+    color: var(--azul);
+    font-weight: 600;
+}
+
+.navegacion-principal a:first-of-type {
+    margin-left: 4rem;
+}
+
+.contenido-header-inferior {
+    padding: 2rem 0;
+}
+
+
+/* .navegacion-principal {
+    display: flex;
+    align-items: center;
+} */
+
+
+/**swiper**/
+
+.swiper-container {
+    width: 100%;
+    height: 64.1vh;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--azul);
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%!important;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination {
+    bottom: 4px!important;
+}
+
+.swiper-pagination-bullet-active {
+    color: var(--negro);
+    background: var(--verde)!important;
+}
+
+.custom-pagination {
+    border-radius: 0;
+    display: inline;
+    padding: 1.5rem 3rem;
+    border-radius: 10px 10px 0 0;
+    color: var(--blanco);
+    font-weight: 600;
+    font-size: 16px;
+    background: var(--grisClaro);
+}
+
+.swiper-hero2 {
+    position: relative;
+}
+
+.swiper-hero2::before {
+    content: '';
+    background-color: rgb(0, 0, 0, .4);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.contenido-swiper-2 {
+    position: relative;
+    z-index: 1;
+    color: var(--blanco);
+}
+
+.contenido-swiper-2 p {
+    font-weight: 600;
+    font-size: 25.19px;
+    line-height: 3rem;
+    margin: 0;
+    position: relative;
+}
+
+.contenido-swiper-2 h2 {
+    margin-bottom: 5px;
+    font-size: 63.18px;
+}
+
+.contenido-swiper-2 p::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 61px;
+    height: 6px;
+    background-color: var(--verde);
+    right: 126px;
+    bottom: -15px;
+}
+
+
+/**search**/
+
+
+/* .search-form {
+    position: relative;
+}
+
+.search-form span {
+    display: none;
+}
+
+.search-form input[type="search"] {
+    border-radius: 7px;
+    border: 1px solid var(--azul);
+    padding: 1rem;
+}
+
+.search-form input[type="submit"] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 5rem;
+    background-color: transparent;
+    background-image: url(../webitconsole/img/buscador.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    text-indent: -9999px;
+    display: block;
+}
+
+.search-form input[type="submit"]:hover {
+    cursor: pointer;
+} */
