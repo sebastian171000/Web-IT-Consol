@@ -51,7 +51,13 @@ function header_hero_imagen()
         background-image: url($imagen);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 0rem -31rem;
+        background-position: center;
+    }
+
+    @media (min-width: 1090px) {
+        body.home .swiper-hero2{
+            background-position: 0rem -31rem;
+        }
     }
     ";
     wp_add_inline_style('custom', $imagen_destacada_css);
