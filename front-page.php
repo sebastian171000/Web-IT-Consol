@@ -36,7 +36,7 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
 </div>
-<div class="contenedor">
+<div class="contenedor" id="soluciones" data-scroll>
     <div class="titulo-h3 seccion">
       <h3>Nuestras Soluciones</h3>
     </div>
@@ -77,7 +77,7 @@
         </div>
     </div>
 </div>
-<div class="hero-creamos-valor-para-las-industrias">
+<div class="hero-creamos-valor-para-las-industrias" id="industrias" data-scroll>
     <div class="contenedor">
         <h3>Creamos valor para las industrias</h3>
         <div class="contenido-cvpli-fila1 seccion">
@@ -136,7 +136,7 @@
         </div>
     </div>
 </div>
-<div class="hero-formulario">
+<div class="hero-formulario" id="contacto" data-scroll>
     <div class="contenedor">
         <h3>Consulta a nuestros expertos</h3>
         <p>Comunicate con nuestros expertos y haremso un diagnostico de tus necesidades.</p>

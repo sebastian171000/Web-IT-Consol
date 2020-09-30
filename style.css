@@ -123,6 +123,31 @@ strong {
 
 /**header**/
 
+.navegacion-principal a {
+    position: relative;
+    transition: 0.7s all;
+    overflow: hidden;
+    display: block;
+}
+
+.navegacion-principal a::before {
+    content: '';
+    width: 60px;
+    position: absolute;
+    border-bottom: 3px solid var(--verde);
+    bottom: 0;
+    right: 350px;
+    transition: 0.7s all;
+}
+
+.navegacion-principal a:hover::before {
+    right: 10px;
+}
+
+.right10px::before {
+    right: 10px;
+}
+
 .navegacion-principal {
     display: flex;
     align-items: center;
@@ -429,6 +454,9 @@ i.fab.fa-twitter-square {
         left: -100%;
         top: 0;
         transition: all .5s;
+    }
+    .left-100 {
+        left: -100%!important;
     }
     .contenido-header-nav a {
         color: var(--blanco);

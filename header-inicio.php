@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
+    
 </head>
 <body <?php body_class(); ?>>
 <header class="header-desktop">
@@ -29,9 +30,9 @@
             <div class="contenido-header-inferior contenedor">
                 <img src="<?php the_field('logo2') ?>" alt="" >
                 <nav class="navegacion-principal">
-                    <a href="">SOLUCIONES</a>
-                    <a href="">INDUSTRIAS</a>
-                    <a href="">CONTACTO</a>
+                    <a data-scroll href="#soluciones">SOLUCIONES</a>
+                    <a data-scroll href="#industrias">INDUSTRIAS</a>
+                    <a data-scroll href="#contacto">CONTACTO</a>
                     <a href="">NOTICIAS Y CONOCIMIENTOS</a>
                     <a href="">NOSOTROS</a>
                     <?php //get_search_form(); ?>
@@ -57,9 +58,9 @@
     <div class="hero-header-nav">
         <div class="contenedor">
             <nav class="contenido-header-nav">
-                <a href="">SOLUCIONES</a>
-                <a href="">INDUSTRIAS</a>
-                <a href="">CONTACTO</a>
+                <a data-scroll href="#soluciones">SOLUCIONES</a>
+                <a data-scroll href="#industrias">INDUSTRIAS</a>
+                <a data-scroll href="#contacto">CONTACTO</a>
                 <a href="">NOTICIAS Y CONOCIMIENTOS</a>
                 <a href="">NOSOTROS</a>
 

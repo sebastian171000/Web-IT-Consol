@@ -16,9 +16,28 @@ jQuery(document).ready($ => {
     $(".swiper-pagination span:nth-child(1)").html('¿Qué hacemos?');
     $(".swiper-pagination span:nth-child(2)").html('¿Cómo lo hacemos?');
     $(".swiper-pagination span:nth-child(3)").html('Conoce más');
-    $(".menu-bar").on('click', function() {
-        $('.hero-header-nav').toggleClass('show-menu');
+    $(".navegacion-principal a").on('click', function() {
+        $(".navegacion-principal a").removeClass('right10px');
+        $(this).addClass('right10px');
     });
+    let contador = 0;
+    $(".menu-bar").on('click', function() {
+        if (contador == 0) {
+            $('.hero-header-nav').removeClass('left-100');
+            $('.hero-header-nav').addClass('show-menu');
+            contador = 1;
+        } else {
+            $('.hero-header-nav').removeClass('show-menu');
+            contador = 0;
+        }
+
+    });
+    $(".contenido-header-nav a").on('click', function() {
+        if (contador == 1) {
+            $('.hero-header-nav').addClass('left-100');
+            contador = 0;
+        }
+    })
     var altura = $('.header-desktop .hero-header-nav').offset().top;
     var barraAltura = $('.header-desktop .hero-header-nav').innerHeight();
     var queryMin = window.matchMedia('(min-width: 769px)');
@@ -45,4 +64,8 @@ jQuery(document).ready($ => {
         }
     });
     //$('.your-name input ').prop("placeholder", "Nombre");
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 800,
+        offset: 100
+    });
 });
