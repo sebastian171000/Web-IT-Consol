@@ -40,22 +40,53 @@ function header_hero_imagen()
     // obtener id pagina principal
     $front_page_id = get_option('page_on_front');
     //obtener id imagen
-    $id_imagen = get_field('hero-swiper2', $front_page_id);
+    $id_imagen1 = get_field('hero-swiper1', $front_page_id);
+    $id_imagen2 = get_field('hero-swiper2', $front_page_id);
+    $id_imagen3 = get_field('hero-swiper3', $front_page_id);
+    $id_imagen4 = get_field('hero-swiper4', $front_page_id);
+    $id_imagen5 = get_field('fondo_formulario', $front_page_id);
     //obtener la imagen
-    $imagen = wp_get_attachment_image_src($id_imagen, 'full')[0];
+    $imagen1 = wp_get_attachment_image_src($id_imagen1, 'full')[0];
+    $imagen2 = wp_get_attachment_image_src($id_imagen2, 'full')[0];
+    $imagen3 = wp_get_attachment_image_src($id_imagen3, 'full')[0];
+    $imagen4 = wp_get_attachment_image_src($id_imagen4, 'full')[0];
+    $imagen5 = wp_get_attachment_image_src($id_imagen5, 'full')[0];
     //style css
     wp_register_style('custom', false);
     wp_enqueue_style('custom');
     $imagen_destacada_css = "
-    body.home .swiper-hero2{
-        background-image: url($imagen);
+    body.home .swiper-hero1{
+        background-image: url($imagen1);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
     }
+    body.home .swiper-hero2{
+        background-image: url($imagen2);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    body.home .swiper-hero3{
+        background-image: url($imagen3);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    body.home .swiper-hero4{
+        background-image: url($imagen4);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    body.home .hero-formulario{
+        background-image: url($imagen5);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     @media (min-width: 1090px) {
-        body.home .swiper-hero2{
+        body.home .swiper-hero1{
             background-position: 0rem -31rem;
         }
     }
