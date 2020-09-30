@@ -45,7 +45,10 @@
         <div class="solucion seccion">
             <div class="contenido-solucion">
                 <h4>Gestión de Activos ISO 55000</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam et quo a corporis enim nemo voluptate ipsam aut. Molestias eum quidem ad exercitationem laboriosam perferendis voluptatibus suscipit eius sed ex.</p>
+                <p>Metodología para implementación de Gestión de Activos
+                (Estrategia, Personas, Proceso, Tecnología), Cursos de
+                formación en Mantenimiento y Confiabilidad, Modelos de
+                Optimización de Recursos y Técnicas de Confiabilidad.</p>
                 <a href="#">CONTÁCTANOS</a>
             </div>
             <div class="img-solucion">
@@ -55,7 +58,7 @@
         <div class="solucion seccion segunda">
             <div class="contenido-solucion ">
                 <h4>Soluciones Tecnológicas EAM y APM</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate quos ducimus sapiente deleniti hic nisi, vero libero dolorum necessitatibus iure quae amet? Dolore reprehenderit illum ullam dignissimos perferendis odio?</p>
+                <p>Soluciones EAM (Enterprise Asset Management) y APM (Asset Performance Management) para la gestión integral de activos, uso de recursos y gestión del desempeño para diversas industrias: Energía, Transporte, Minería, Manufactura, Salud, Alimentos, Proveedores de Servicios, etc.</p>
                 <a href="#">CONTÁCTANOS</a>
             </div>
             <div class="img-solucion">
@@ -65,7 +68,7 @@
         <div class="solucion seccion">
             <div class="contenido-solucion">
                 <h4>Transformación Digital</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis nesciunt quam temporibus distinctio hic. Quisquam sit, esse, reprehenderit dolores recusandae repellendus in cumque modi itaque vel ad aperiam molestiae minus.</p>
+                <p>Asesoramiento a empresas hacia la transformación digital de procesos operativos mediante la implementación de soluciones especializadas de industria 4.0.</p>
                 <a href="#">CONTÁCTANOS</a>
             </div>
             <div class="img-solucion">

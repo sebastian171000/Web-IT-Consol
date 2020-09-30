@@ -13,7 +13,7 @@
                 <img src="<?php the_field('logo') ?>" alt="" >
                 <div>
                     <nav class="nav-idiomas">
-                        <p><a href="#">En</a> | <a href="#">Por</a></p>    
+                        <p><a href="#">EN</a> | <a href="#">POR</a> | <a href="#">SPA</a></p>    
                     </nav>
                     <nav class="redes-sociales-header">
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
