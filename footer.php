@@ -3,9 +3,7 @@
         <div class="contenido-footer">
             <div class="footer">
                 <p><strong>México</strong>-<strong>Perú</strong>-<strong>EE.UU.</strong>-<strong>Brasil</strong>-<strong>Colombia</strong></p>
-                <p>2020 It Consol Todos los derechos son reservados
-                Las marcas y logos que aparecen dentro del sitio
-                pertenecen a sus respectivos propietarios.</p>
+                <p>2020 | IT CONSOL | Todos los derechos son reservados | Las marcas y logos que aparecen dentro del sitio pertenecen a sus respectivos propietarios.</p>
             </div>
             <div class="footer">
                 <img src="<?php the_field('logo') ?>" alt="" >
