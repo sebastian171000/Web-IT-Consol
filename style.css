@@ -954,6 +954,7 @@ div.asl_w .probox {
 .img-experiencia img:nth-child(1) {
     position: absolute;
     bottom: 10px;
+    height: 96%;
 }
 
 .img-experiencia img:nth-child(2) {
