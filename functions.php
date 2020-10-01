@@ -51,10 +51,36 @@ function header_hero_imagen()
     $imagen3 = wp_get_attachment_image_src($id_imagen3, 'full')[0];
     $imagen4 = wp_get_attachment_image_src($id_imagen4, 'full')[0];
     $imagen5 = wp_get_attachment_image_src($id_imagen5, 'full')[0];
+    $url = get_template_directory_uri();
     //style css
     wp_register_style('custom', false);
     wp_enqueue_style('custom');
     $imagen_destacada_css = "
+    @font-face {
+        font-family: Futura Bold font;
+        src: url($url/FUTURA/Futura\ Bold\ font.ttf);
+    }
+    @font-face {
+        font-family: Futura Std Bold;
+        src: url($url/FUTURA/Futura\ Std\ Bold.otf);
+    }
+    @font-face {
+        font-family: Flexo-Bold;
+        src: url($url/FLEXO/Flexo-Bold.ttf);
+    }
+    @font-face {
+        font-family: futura medium bt;
+        src: url($url/FUTURA/futura\ medium\ bt.ttf);
+    }
+    @font-face {
+        font-family: futura medium condensed bt;
+        src: url($url/FUTURA/futura\ medium\ condensed\ bt.ttf);
+    }
+    @font-face {
+        font-family: Futura Medium italic font;
+        src: url($url/FUTURA/Futura\ Medium\ italic\ font.ttf);
+    }
+    
     body.home .swiper-hero1{
         background-image: url($imagen1);
         background-repeat: no-repeat;

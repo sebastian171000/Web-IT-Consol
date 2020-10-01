@@ -21,11 +21,11 @@
                 </nav>
             </div>
             <div class="footer">
-                <nav class="redes-sociales-footer">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter-square"></i></a>
-                </nav>
+            <nav class="redes-sociales-header">
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt=""></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/in.png" alt=""></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt=""></a>
+                    </nav>
             </div>
         </div>
 

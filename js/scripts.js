@@ -40,8 +40,8 @@ jQuery(document).ready($ => {
     })
     var altura = $('.header-desktop .hero-header-nav').offset().top;
     var barraAltura = $('.header-desktop .hero-header-nav').innerHeight();
-    var queryMin = window.matchMedia('(min-width: 769px)');
-    var queryMax = window.matchMedia('(max-width: 768px)');
+    var queryMin = window.matchMedia('(min-width: 977px)');
+    var queryMax = window.matchMedia('(max-width: 976px)');
     $('.header-desktop .contenido-header-inferior img').css('opacity', 0);
 
     $(window).on('scroll', function() {

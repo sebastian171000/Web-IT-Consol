@@ -17,9 +17,9 @@
                         <p><a href="#">EN</a> | <a href="#">POR</a> | <a href="#">SPA</a></p>    
                     </nav>
                     <nav class="redes-sociales-header">
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/in.png" alt=""></a>
+                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt=""></a>
                     </nav>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <a data-scroll href="#contacto">CONTACTO</a>
                     <a href="">NOTICIAS Y CONOCIMIENTOS</a>
                     <a href="">NOSOTROS</a>
-                    <?php //get_search_form(); ?>
+                    <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
                 </nav>
             </div>
 
@@ -66,10 +66,10 @@
 
             </nav>
             <nav class="redes-sociales-header">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
-            </nav>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt=""></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/in.png" alt=""></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt=""></a>
+                    </nav>
             <nav class="nav-idiomas">
                 <p><a href="#">En</a> | <a href="#">Por</a></p>    
             </nav>
