@@ -81,15 +81,29 @@ h4 {
     font-family: Futura Bold font;
 }
 
+h5 {
+    color: var(--azul);
+    font-family: futura light bt;
+    font-size: 28px;
+    margin: 0;
+}
+
+.soluciones-energia h4 {
+    line-height: 32px;
+    margin-bottom: -9px;
+    letter-spacing: 1px;
+}
+
 
 /**globales**/
 
 p {
-    font-family: futura medium;
+    font-family: 'futura medium bt';
 }
 
 .contenido-swiper p {
-    font-family: Futura Bold font;
+    /* font-family: Futura Bold font; */
+    font-family: 'futura medium bt';
 }
 
 a {
@@ -220,6 +234,9 @@ i.fab.fa-twitter-square {
     width: 100%;
     top: 0;
     z-index: 100000;
+    -webkit-box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.14);
 }
 
 .transicion0 {
@@ -291,10 +308,10 @@ i.fab.fa-twitter-square {
     height: 79.1vh;
 }
 
-.swiper-slide {
+.swiper-slide,
+.centrar-contenido-banner {
     text-align: center;
     font-size: 18px;
-    background: var(--azul);
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -311,17 +328,11 @@ i.fab.fa-twitter-square {
     width: 100%!important;
 }
 
-.swiper-hero1,
-.swiper-hero2,
-.swiper-hero3,
-.swiper-hero4 {
+.p-relative {
     position: relative;
 }
 
-.swiper-hero1::before,
-.swiper-hero2::before,
-.swiper-hero3::before,
-.swiper-hero4::before {
+.capa-oscura::before {
     content: '';
     background-color: rgb(0, 0, 0, .4);
     position: absolute;
@@ -331,13 +342,14 @@ i.fab.fa-twitter-square {
     left: 0;
 }
 
-.contenido-swiper {
+.contenido-swiper,
+.estilos-banner {
     position: relative;
     z-index: 1;
     color: var(--blanco);
 }
 
-.contenido-swiper p {
+.estilos-banner p {
     font-weight: 600;
     font-size: 16px;
     line-height: 3rem;
@@ -346,7 +358,7 @@ i.fab.fa-twitter-square {
     display: inline;
 }
 
-.contenido-swiper h2 {
+.estilos-banner h2 {
     margin-bottom: 5px;
     font-size: 40px;
 }
@@ -354,7 +366,8 @@ i.fab.fa-twitter-square {
 .contenido-swiper.swiper2 p::after,
 .contenido-swiper.swiper1 p::after,
 .contenido-swiper.swiper3 p::after,
-.contenido-swiper.swiper4 p::after {
+.contenido-swiper.swiper4 p::after,
+.estilos-banner p::after {
     content: '';
     display: block;
     position: absolute;
@@ -369,7 +382,7 @@ i.fab.fa-twitter-square {
     .contenido-swiper.swiper2 p::after,
     .contenido-swiper.swiper1 p::after,
     .contenido-swiper.swiper3 p::after,
-    .contenido-swiper.swiper4 p::after {
+    .estilos-banner p::after {
         width: 60px;
     }
 }
@@ -429,17 +442,22 @@ i.fab.fa-twitter-square {
     .header-desktop {
         display: block;
     }
-    .contenido-swiper p {
+    .contenido-swiper p,
+    .estilos-banner p {
         font-size: 25.19px;
     }
     .contenido-swiper h2 {
         font-size: 63.18px;
     }
-    .contenido-swiper p::after {
+    .contenido-swiper p::after,
+    .estilos-banner p::after {
         width: 61px;
         height: 6px;
         right: 126px;
         bottom: -15px;
+    }
+    .estilos-banner p::after {
+        right: 0;
     }
     .redes-sociales-header {
         text-align: right;
@@ -560,6 +578,7 @@ i.fab.fa-twitter-square {
 
 .contenido-solucion p {
     margin: 25px 0;
+    margin-top: 5px;
 }
 
 .img-solucion {
@@ -571,6 +590,7 @@ i.fab.fa-twitter-square {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
+        align-items: center
     }
     .solucion.segunda .contenido-solucion {
         grid-column: 2/3;
@@ -703,8 +723,10 @@ i.fab.fa-twitter-square {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 2rem;
     }
-    .industria {
+    .home .industria {
         width: 21rem;
+    }
+    .industria {
         margin: 0;
     }
     .contenido-cvpli-fila1 .industria {
@@ -713,6 +735,7 @@ i.fab.fa-twitter-square {
     .contenido-cvpli-fila2 {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     .contenido-cvpli-fila2 .industria:nth-child(2) {
         margin: 0 100px;
@@ -963,4 +986,44 @@ div.asl_w .probox {
 
 .redes-sociales-header a:nth-child(2) {
     margin: 0 5px;
+}
+
+.icono {
+    cursor: pointer;
+}
+
+
+/**Pagina de energia**/
+
+.listas-soluciones ul li {
+    font-family: 'futura medium bt';
+}
+
+.listas-soluciones {
+    margin: 4rem 0;
+}
+
+@media (min-width: 768px) {
+    .listas-soluciones {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        margin: 4rem 0;
+    }
+    .listas-soluciones ul {
+        margin-left: 2rem;
+    }
+}
+
+.hero-banner2 h2 {
+    font-size: 35px;
+}
+
+.industria h4 {
+    font-size: 25px;
+}
+
+body.page-id-89 .industria p {
+    color: var(--azul);
 }

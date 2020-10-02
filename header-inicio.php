@@ -11,7 +11,9 @@
     <div class="hero-header">
         <div class="contenedor">
             <div class="contenido-header-superior">
-                <img src="<?php the_field('logo') ?>" alt="" >
+                <a href="<?php echo esc_url(site_url('/')) ?>">
+                    <img src="<?php the_field('logo','2')?>" alt="">
+                </a>
                 <div>
                     <nav class="nav-idiomas">
                         <p><a href="#">EN</a> | <a href="#">POR</a> | <a href="#">SPA</a></p>    
@@ -28,7 +30,9 @@
     <div class="hero-header-nav">
         <!-- <div class="contenedor"> -->
             <div class="contenido-header-inferior contenedor">
-                <img src="<?php the_field('logo2') ?>" alt="" >
+                <a href="<?php echo esc_url(site_url('/')) ?>">
+                    <img src="<?php the_field('logo2','2')?>" alt="">
+                </a>
                 <nav class="navegacion-principal">
                     <a data-scroll href="#soluciones">SOLUCIONES</a>
                     <a data-scroll href="#industrias">INDUSTRIAS</a>
@@ -47,7 +51,9 @@
         <div class="contenedor">
             <div class="contenido-header-mobile">
                 <div class="logo-mobile">
-                    <img src="<?php the_field('logo') ?>" alt="" >
+                    <a href="<?php echo esc_url(site_url('/')) ?>">
+                        <img src="<?php the_field('logo','2')?>" alt="">
+                    </a>
                 </div>
                 <div class="menu-bar">
                     <i class="fas fa-bars"></i>

@@ -45,12 +45,20 @@ function header_hero_imagen()
     $id_imagen3 = get_field('hero-swiper3', $front_page_id);
     $id_imagen4 = get_field('hero-swiper4', $front_page_id);
     $id_imagen5 = get_field('fondo_formulario', $front_page_id);
+    $id_imagen6 = get_field('banner_imagen', '89');
+    $id_imagen7 = get_field('banner_imagen2', '89');
+    $id_imagen8 = get_field('banner_imagen', '115');
+    $id_imagen9 = get_field('banner_imagen2', '115');
     //obtener la imagen
     $imagen1 = wp_get_attachment_image_src($id_imagen1, 'full')[0];
     $imagen2 = wp_get_attachment_image_src($id_imagen2, 'full')[0];
     $imagen3 = wp_get_attachment_image_src($id_imagen3, 'full')[0];
     $imagen4 = wp_get_attachment_image_src($id_imagen4, 'full')[0];
     $imagen5 = wp_get_attachment_image_src($id_imagen5, 'full')[0];
+    $imagen6 = wp_get_attachment_image_src($id_imagen6, 'full')[0];
+    $imagen7 = wp_get_attachment_image_src($id_imagen7, 'full')[0];
+    $imagen8 = wp_get_attachment_image_src($id_imagen8, 'full')[0];
+    $imagen9 = wp_get_attachment_image_src($id_imagen9, 'full')[0];
     $url = get_template_directory_uri();
     //style css
     wp_register_style('custom', false);
@@ -80,6 +88,10 @@ function header_hero_imagen()
         font-family: Futura Medium italic font;
         src: url($url/FUTURA/Futura\ Medium\ italic\ font.ttf);
     }
+    @font-face {
+        font-family: futura light bt;
+        src: url($url/FUTURA/futura\ light\ bt.ttf);
+    }
     
     body.home .swiper-hero1{
         background-image: url($imagen1);
@@ -105,12 +117,39 @@ function header_hero_imagen()
         background-size: cover;
         background-position: center;
     }
-    body.home .hero-formulario{
+    .hero-formulario{
         background-image: url($imagen5);
         background-repeat: no-repeat;
         background-size: cover;
     }
-
+    body.page-id-89 .hero-energia{
+        background-image: url($imagen6);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 79.1vh;
+        background-position: center;
+    }
+    body.page-id-89 .hero-energia2{
+        background-image: url($imagen7);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 69.1vh;
+    }
+    body.page-id-115 .hero-transporte{
+        background-image: url($imagen7);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 79.1vh;
+        background-position: center;
+    }
+    body.page-id-115 .hero-transporte2{
+        background-image: url($imagen8);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 69.1vh;
+    }
     @media (min-width: 1090px) {
         body.home .swiper-hero1{
             background-position: 0rem -31rem;
