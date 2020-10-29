@@ -1,35 +1,66 @@
-<div class="hero-creamos-valor-para-las-industrias hero-nuestra-experiencia">
+<div class="titulo-h3 seccion">
+      <h3><?php the_field("titulo_experiencia","2"); ?></h3>
+</div>
+<div class="hero-nuestra-experiencia">
     <div class="contenedor">
-        <h3>Nuestra Experiencia</h3>
-        <div class="contenido-experiencia seccion">
-            <div class="experiencia exp1">
-                <div class="img-experiencia ">
-                    <img src="<?php the_field('imagen_experiencia1','2'); ?>" alt="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/ELECTRODUNAS2.png" alt="">
-                </div>  
-                <h4>ELECTRODUNAS <br> Distribución  de Energía </h4>
+        <div class="swiper-container3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="contenido-experiencia seccion">
+                        <?php for($i = 1; $i<=4; $i++): ?>
+                        <?php if(!empty(get_field("imagen_experiencia$i","2")) && !empty(get_field("imagen_experiencia_hover$i","2"))): ?>
+                        <div class="experiencia exp<?php echo $i;?>">
+                            <div class="img-experiencia">
+                                <img src="<?php the_field("imagen_experiencia$i","2"); ?>" alt="">
+                                <img src="<?php the_field("imagen_experiencia_hover$i","2"); ?>" alt="">
+                            </div>  
+                            <h4><?php the_field("subtitulo_experiencia$i","2"); ?></h4>
+                            <p><?php the_field("texto_experiencia$i","2"); ?></p>  
+                        </div>
+                        <?php endif; ?>
+                        <?php endfor; ?>
+                        
+                    </div>          
+                </div>
+                <div class="swiper-slide">
+                <div class="contenido-experiencia seccion">
+                        <?php for($i = 1; $i<=4; $i++): ?>
+                        <?php if(!empty(get_field("imagen_experiencia$i","2")) && !empty(get_field("imagen_experiencia_hover$i","2"))): ?>
+                        <div class="experiencia exp<?php echo $i;?>">
+                            <div class="img-experiencia">
+                                <img src="<?php the_field("imagen_experiencia$i","2"); ?>" alt="">
+                                <img src="<?php the_field("imagen_experiencia_hover$i","2"); ?>" alt="">
+                            </div>  
+                            <h4><?php the_field("subtitulo_experiencia$i","2"); ?></h4>
+                            <p><?php the_field("texto_experiencia$i","2"); ?></p>  
+                        </div>
+                        <?php endif; ?>
+                        <?php endfor; ?>
+                        
+                    </div>         
+                </div>
+                <div class="swiper-slide">
+                <div class="contenido-experiencia seccion">
+                        <?php for($i = 1; $i<=4; $i++): ?>
+                        <?php if(!empty(get_field("imagen_experiencia$i","2")) && !empty(get_field("imagen_experiencia_hover$i","2"))): ?>
+                        <div class="experiencia exp<?php echo $i;?>">
+                            <div class="img-experiencia">
+                                <img src="<?php the_field("imagen_experiencia$i","2"); ?>" alt="">
+                                <img src="<?php the_field("imagen_experiencia_hover$i","2"); ?>" alt="">
+                            </div>  
+                            <h4><?php the_field("subtitulo_experiencia$i","2"); ?></h4>
+                            <p><?php the_field("texto_experiencia$i","2"); ?></p>  
+                        </div>
+                        <?php endif; ?>
+                        <?php endfor; ?>
+                        
+                    </div>         
+                </div>
+
             </div>
-            <div class="experiencia exp2">
-                <div class="img-experiencia ">
-                    <img src="<?php the_field('imagen_experiencia2','2'); ?>" alt="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/hermesv3.png" alt="">
-                </div> 
-                <h4>HERMES <br> Servicios de  Administración  de Riesgos  </h4>
-            </div>
-            <div class="experiencia exp3">
-                <div class="img-experiencia ">
-                    <img src="<?php the_field('imagen_experiencia3','2'); ?>" alt="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/DPWORLD2.png" alt="">
-                </div> 
-                <h4>DPWORLD <br> Administración de Puertos y  Cadena Logística  </h4>
-            </div>
-            <div class="experiencia exp4">
-                <div class="img-experiencia ">
-                    <img src="<?php the_field('imagen_experiencia4','2'); ?>" alt="">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/SDF.png" alt="">
-                </div> 
-                <h4>SUDAMERICANA  DE FIBRAS <br> Fabricación  de Fibras textiles  </h4>
-            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination3"></div>
         </div>
     </div>
 </div>
+

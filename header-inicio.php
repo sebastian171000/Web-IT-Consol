@@ -14,11 +14,13 @@
                 <a href="<?php echo esc_url(site_url('/')) ?>">
                     <img src="<?php the_field('logo','2')?>" alt="">
                 </a>
-                <div>
-                    <nav class="nav-idiomas">
-                        <p><a href="#">EN</a> | <a href="#">POR</a> | <a href="#">SPA</a></p>    
+                <div class="contenedor-idiomas-sociales">
+                    <nav class="nav-idiomas idiomas-desktop">
+                        <a href="#">ING</a>
+                        <a href="#">POR</a>
+                        <a class="idioma-activo" href="#">ESP</a>   
                     </nav>
-                    <nav class="redes-sociales-header">
+                    <nav class="redes-sociales-header" style="margin-right:6rem;">
                         <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt=""></a>
                         <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/in.png" alt=""></a>
                         <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt=""></a>
@@ -34,12 +36,13 @@
                     <img src="<?php the_field('logo2','2')?>" alt="">
                 </a>
                 <nav class="navegacion-principal">
-                    <a data-scroll href="#soluciones">SOLUCIONES</a>
-                    <a data-scroll href="#industrias">INDUSTRIAS</a>
-                    <a data-scroll href="#contacto">CONTACTO</a>
-                    <a href="">NOTICIAS Y CONOCIMIENTOS</a>
-                    <a href="">NOSOTROS</a>
-                    <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+                <?php for($i = 1; $i<=10; $i++): ?>
+                    <?php if(!empty(get_field("url$i","2")) && !empty(get_field("texto_menu$i","2"))): ?>
+                        <a <?php echo strpos(get_field("url$i","2"), "#") !== false ? 'data-scroll' : ''; ?>  href="<?php the_field("url$i","2"); ?>"><?php the_field("texto_menu$i","2"); ?></a>
+                        <?php endif; ?>
+                    
+                <?php endfor; ?>
+                <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
                 </nav>
             </div>
 
@@ -64,11 +67,11 @@
     <div class="hero-header-nav">
         <div class="contenedor">
             <nav class="contenido-header-nav">
-                <a data-scroll href="#soluciones">SOLUCIONES</a>
-                <a data-scroll href="#industrias">INDUSTRIAS</a>
-                <a data-scroll href="#contacto">CONTACTO</a>
-                <a href="">NOTICIAS Y CONOCIMIENTOS</a>
-                <a href="">NOSOTROS</a>
+                <a data-scroll href="<?php the_field('url1','2'); ?>"><?php the_field('texto_menu1','2'); ?></a>
+                <a data-scroll href="<?php the_field('url2','2'); ?>"><?php the_field('texto_menu2','2'); ?></a>
+                <a data-scroll href="<?php the_field('url3','2'); ?>"><?php the_field('texto_menu3','2'); ?></a>
+                <a href="<?php the_field('url4','2'); ?>"><?php the_field('texto_menu4','2'); ?></a>
+                <a href="<?php the_field('url5','2'); ?>"><?php the_field('texto_menu5','2'); ?></a>
 
             </nav>
             <nav class="redes-sociales-header">

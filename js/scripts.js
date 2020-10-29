@@ -4,18 +4,61 @@ jQuery(document).ready($ => {
         slidesPerView: 1,
         //spaceBetween: 30,
         loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
     });
-    $(".swiper-pagination span:nth-child(1)").html('¿Qué hacemos?');
-    $(".swiper-pagination span:nth-child(2)").html('¿Cómo lo hacemos?');
-    $(".swiper-pagination span:nth-child(3)").html('Conoce más');
+
+    var swiper2 = new Swiper('.swiper-container2', {
+
+        slidesPerView: 1,
+        //spaceBetween: 30,
+        loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: '.swiper-pagination2',
+            clickable: true,
+        },
+    });
+
+    var swiper3 = new Swiper('.swiper-container3', {
+
+        slidesPerView: 1,
+        //spaceBetween: 10,
+        loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: '.swiper-pagination3',
+            clickable: true,
+        },
+    });
+
+    var swiper4 = new Swiper('.swiper-container4', {
+
+        slidesPerView: 1,
+        //spaceBetween: 10,
+        loop: true,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: '.swiper-pagination4',
+            clickable: true,
+        },
+    });
+
     $(".navegacion-principal a").on('click', function() {
         $(".navegacion-principal a").removeClass('right10px');
         $(this).addClass('right10px');

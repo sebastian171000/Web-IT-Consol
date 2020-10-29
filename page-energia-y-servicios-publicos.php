@@ -73,6 +73,6 @@ y Seguridad</p>
         </div>
     </div>
 </div>
-<?php get_template_part('templates-part/formulario') ?>
 <?php get_template_part('templates-part/experiencia') ?>
+<?php get_template_part('templates-part/formulario') ?>
 <?php get_footer();  ?>

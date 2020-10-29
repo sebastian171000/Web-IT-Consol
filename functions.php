@@ -49,6 +49,7 @@ function header_hero_imagen()
     $id_imagen7 = get_field('banner_imagen2', '89');
     $id_imagen8 = get_field('banner_imagen', '115');
     $id_imagen9 = get_field('banner_imagen2', '115');
+    $id_imagen10 = get_field('hero-swiper5', $front_page_id);
     //obtener la imagen
     $imagen1 = wp_get_attachment_image_src($id_imagen1, 'full')[0];
     $imagen2 = wp_get_attachment_image_src($id_imagen2, 'full')[0];
@@ -59,39 +60,12 @@ function header_hero_imagen()
     $imagen7 = wp_get_attachment_image_src($id_imagen7, 'full')[0];
     $imagen8 = wp_get_attachment_image_src($id_imagen8, 'full')[0];
     $imagen9 = wp_get_attachment_image_src($id_imagen9, 'full')[0];
-    $url = get_template_directory_uri();
+    $imagen10 = wp_get_attachment_image_src($id_imagen10, 'full')[0];
     //style css
     wp_register_style('custom', false);
     wp_enqueue_style('custom');
     $imagen_destacada_css = "
-    @font-face {
-        font-family: Futura Bold font;
-        src: url($url/FUTURA/Futura\ Bold\ font.ttf);
-    }
-    @font-face {
-        font-family: Futura Std Bold;
-        src: url($url/FUTURA/Futura\ Std\ Bold.otf);
-    }
-    @font-face {
-        font-family: Flexo-Bold;
-        src: url($url/FLEXO/Flexo-Bold.ttf);
-    }
-    @font-face {
-        font-family: futura medium bt;
-        src: url($url/FUTURA/futura\ medium\ bt.ttf);
-    }
-    @font-face {
-        font-family: futura medium condensed bt;
-        src: url($url/FUTURA/futura\ medium\ condensed\ bt.ttf);
-    }
-    @font-face {
-        font-family: Futura Medium italic font;
-        src: url($url/FUTURA/Futura\ Medium\ italic\ font.ttf);
-    }
-    @font-face {
-        font-family: futura light bt;
-        src: url($url/FUTURA/futura\ light\ bt.ttf);
-    }
+    
     
     body.home .swiper-hero1{
         background-image: url($imagen1);
@@ -117,11 +91,13 @@ function header_hero_imagen()
         background-size: cover;
         background-position: center;
     }
-    .hero-formulario{
-        background-image: url($imagen5);
+    body.home .swiper-hero5{
+        background-image: url($imagen10);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
+    
     body.page-id-89 .hero-energia{
         background-image: url($imagen6);
         background-repeat: no-repeat;
@@ -159,4 +135,9 @@ function header_hero_imagen()
     wp_add_inline_style('custom', $imagen_destacada_css);
 }
 add_action('init', 'header_hero_imagen');
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+   }
+add_filter('upload_mimes', 'cc_mime_types');
 ?>
