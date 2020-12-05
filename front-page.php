@@ -1,5 +1,6 @@
 <?php get_header('inicio');  ?>
 <!-- Swiper -->
+<h1>Prueba git</h1>
 <div class="swiper-container banners">
     <div class="swiper-wrapper">
         <?php for($i = 1; $i<=10; $i++): ?>
