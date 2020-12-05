@@ -17,19 +17,27 @@ function webitconsole_scripts_styles()
 {
     //la hoja de estilo principal
     wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700,900|Staatliches&display=swap', array(), '1.0.0');
+    wp_enqueue_style('slider-btns-css', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css', array(), '1.0.0');
+    wp_enqueue_style('aoscss', 'https://unpkg.com/aos@next/dist/aos.css', array(), '1.0.0');
     //css
     wp_enqueue_style('adobefonts', 'https://use.typekit.net/xmj4frm.css', array(), '1.0.0');
     wp_enqueue_style('swipecss', get_template_directory_uri() . '/css/swiper.min.css', array(), '1.0.0');
+
+
     wp_enqueue_style('normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googlefonts','swipecss'), '1.0.0');    
     //javascript
-    wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery','swipejs'), '1.0.0', true);
     wp_enqueue_script('swipejs', get_template_directory_uri() . '/js/swiper.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('smooth-scroll-js', get_template_directory_uri() . '/js/smooth-scroll.min.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('slider-btns-js1', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('slider-btns-js2', 'https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('sweeat-alert', 'https://cdn.jsdelivr.net/npm/sweetalert2@10', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('aosjs', 'https://unpkg.com/aos@next/dist/aos.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery','swipejs'), '1.0.0', true);
     //fontawesome
     wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/a0e0d9b7b0.js', array(), '1.0.0');
     
-
+    
     
 }
 //va acargar hojas de estilo en la parte frontal del sitio web

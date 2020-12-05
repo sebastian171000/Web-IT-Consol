@@ -4,10 +4,12 @@
     <div class="swiper-wrapper">
         <?php for($i = 1; $i<=10; $i++): ?>
             <?php if(!empty(get_field("titulo$i")) && !empty(get_field("parrafo$i"))): ?>
-                <div class="swiper-slide swiper-hero<?php echo $i;?> p-relative capa-oscura">
+                <div class="swiper-slide banners swiper-hero<?php echo $i;?> p-relative capa-oscura">
                     <div class="contenido-swiper estilos-banner swiper<?php echo $i;?>">
-                    <h2><?php the_field("titulo$i"); ?></h2>
-                    <p><?php the_field("parrafo$i"); ?></p>
+                    <h2 data-swiper-parallax="-3000" data-swiper-parallax-opacity="0"><?php the_field("titulo$i"); ?></h2>
+                    <div class="text" data-swiper-parallax="-2000" data-swiper-parallax-opacity="0">
+                        <p><?php the_field("parrafo$i"); ?></p>
+                    </div>
                     </div>
                 </div>
             <?php endif; ?>
@@ -20,65 +22,61 @@
     <div class="botones-swiper">
         <a class="btn-swiper" href="#">¿Qué hacemos?</a>
         <a class="btn-swiper" href="#">¿Cómo lo hacemos?</a>
-        <a class="btn-swiper" href="#">¿Conoce más?</a>  
+        <a class="btn-swiper" href="#">Conoce más</a>  
     </div>
 </div>
-
-<div class="contenedor" id="soluciones" data-scroll>
-    <div class="titulo-h3 seccion">
-      <h3><?php the_field("titulo_soluciones_home"); ?></h3>
-    </div>
-    <div class="contenido-soluciones">
-        <?php for($i = 1; $i<=10; $i++): ?>
-            <?php if(!empty(get_field("subtitulo_soluciones_home$i")) && !empty(get_field("texto_soluciones_home$i")) && !empty(get_field("imagen_soluciones_home$i"))): ?>
-            <div class="solucion seccion <?php echo ($i % 2) == 0 ? 'par' : ''; ?>">
-                <div class="contenido-solucion">
-                    <h4><?php the_field("subtitulo_soluciones_home$i"); ?></h4>
-                    <p><?php the_field("texto_soluciones_home$i"); ?></p>
-                    <div class="contenedor-boton">
-                        <!-- Swiper -->
-                        <div class="swiper-container2">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#">CONOCE MÁS</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">CONTÁCTANOS</a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#">BOTON3</a></div>
-                                </div>
-                        <!-- Add Pagination -->
-                            <div  class="swiper-pagination2"></div>
+<div class="hero-soluciones">
+    <div  class="contenedor" id="soluciones" data-scroll>
+        <div data-aos="fade-up" class="titulo-h3 seccion">
+        <h3><?php the_field("titulo_soluciones_home"); ?></h3>
+        </div>
+        <div class="contenido-soluciones">
+            <?php for($i = 1; $i<=10; $i++): ?>
+                <?php if(!empty(get_field("subtitulo_soluciones_home$i")) && !empty(get_field("texto_soluciones_home$i")) && !empty(get_field("imagen_soluciones_home$i"))): ?>
+                <div data-aos="fade-up" class="solucion seccion <?php echo ($i % 2) == 0 ? 'par' : ''; ?>">
+                    <div class="contenido-solucion">
+                        <h4><?php the_field("subtitulo_soluciones_home$i"); ?></h4>
+                        <p><?php the_field("texto_soluciones_home$i"); ?></p>
+                        <div class="contenedor-boton">
+                            <div class="slider">
+                            <a href="#">CONOCE MÁS</a>
+                                <a href="#">CONTÁCTANOS</a>
+                                <a href="#">COMPARTIR</a>
+                            </div>
                         </div>
                     </div>
+                    <div class="img-solucion">
+                        <img src="<?php the_field("imagen_soluciones_home$i") ?>" alt="" >
+                    </div>
                 </div>
-                <div class="img-solucion">
-                    <img src="<?php the_field("imagen_soluciones_home$i") ?>" alt="" >
-                </div>
-            </div>
-            <hr>
-            <?php endif; ?>
-        <?php endfor; ?>
+                <hr data-aos="fade-up">
+                <?php endif; ?>
+            <?php endfor; ?>
+        </div>
     </div>
 </div>
-
 <div class="hero-creamos-valor-para-las-industrias" id="industrias" data-scroll>
     <div class="contenedor">
-        <div class="titulo-h3 seccion">
+        <div data-aos="fade-up" class="titulo-h3 seccion">
             <h3><?php the_field('titulo_industrias_home'); ?></h3>
         </div>
         <div class="contenido-cvpli-fila1 seccion">
             <?php for($i = 1; $i<=10; $i++): ?>
             <?php if(!empty(get_field("icono_industria_home$i")) && !empty(get_field("titulo_icono_industria_home$i"))): ?>
-            <div class="industria <?php echo ($i % 4 != 0) ? 'border-right' : '';?>">
-                <div>
-                    <img src="<?php the_field("icono_industria_home$i"); ?>" alt="">
-                    <h4><?php the_field("titulo_icono_industria_home$i"); ?></h4>
+            <a data-aos="fade-up" class="industria-enlace<?php echo $i?>" href="<?php echo the_field("link_industria_home$i"); ?>" style="display:contents;">
+            <div  class="industria-home industria <?php echo ($i % 4 != 0) ? 'border-right' : '';?>">
+
+                <?php if(!empty(get_field("fondo-hover$i"))): ?>
+                <img class="fondo-hover" src="<?php echo the_field("fondo-hover$i"); ?>" alt="">
+                <?php endif; ?>
+
+                <div> 
+                    <img data-aos="fade-up" src="<?php the_field("icono_industria_home$i"); ?>" alt="">
+                    <h4 data-aos="fade-up"><?php the_field("titulo_icono_industria_home$i"); ?></h4>
                 </div>
-                <a href="<?php echo the_field("link_industria_home$i"); ?>"><?php the_field("texto_boton_industrias_home"); ?></a>
                 
             </div>
+            </a>
             <?php endif; ?>
             <?php endfor; ?>
         </div>

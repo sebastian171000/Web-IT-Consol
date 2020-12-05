@@ -166,6 +166,14 @@ strong {
     margin: 4rem 0;
 }
 
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
 
 /**header**/
 
@@ -187,7 +195,9 @@ strong {
 }
 
 .navegacion-principal a:hover::before {
-    right: 10px;
+    right: 0;
+    left: 0;
+    margin: auto;
 }
 
 .right10px::before {
@@ -654,11 +664,11 @@ hr {
     color: var(--titulos);
     font-weight: bold;
     font-size: 35px;
+    margin-bottom: 3rem;
 }
 
 .contenido-solucion a {
     color: white;
-    padding: 10px 30px;
     border-radius: 20px;
     margin-top: 30px;
 }
@@ -800,11 +810,16 @@ hr {
     margin: 5rem 0;
 }
 
+.industria img {
+    width: 6rem;
+}
+
 .industria a {
     background-color: var(--azul);
     border-right: 1px solid var(--azul);
     color: white;
     padding: 5px 0;
+    display: none;
 }
 
 .home .industria {
@@ -812,6 +827,13 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.home .industria-enlace1 .industria-home,
+.home .industria-enlace2 .industria-home,
+.home .industria-enlace3 .industria-home,
+.home .industria-enlace4 .industria-home {
+    border-bottom: 1px solid rgb(172, 172, 172);
 }
 
 .industria:nth-child(1) a,
@@ -1144,7 +1166,7 @@ div.asl_w .probox {
 }
 
 .industria h4 {
-    font-size: 25px;
+    font-size: 23px;
 }
 
 body.page-id-89 .industria p {
@@ -1170,10 +1192,11 @@ body.page-id-89 .industria p {
 .industria div {
     margin-top: 10rem;
     padding: 0 55px;
+    text-align: left;
 }
 
 .industria {
-    height: 40rem;
+    height: 38rem;
 }
 
 .contenedor-boton {
@@ -1192,7 +1215,7 @@ body.page-id-89 .industria p {
 } */
 
 .hero-nuestra-experiencia {
-    background-color: var(--azul);
+    background-color: rgb(7, 42, 96);
     padding: 4rem 0;
 }
 
@@ -1337,4 +1360,174 @@ body.page-id-89 .industria p {
 
 .innericon svg {
     width: 20px!important;
+}
+
+.bx-wrapper {
+    max-width: 40%!important;
+    border-radius: 25px;
+    background: var(--verde);
+    box-shadow: none;
+    border: none;
+}
+
+.slider a {
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.bx-viewport {
+    height: unset;
+    padding: 4px 0;
+}
+
+.bx-pager-item a {
+    background: transparent!important;
+    border: 2px solid rgb(124, 124, 124);
+}
+
+.bx-pager-link.active {
+    border: none;
+    background-color: var(--verde)!important;
+}
+
+.hero-header-nav {
+    background-color: rgb(255, 255, 255);
+}
+
+.hero-creamos-valor-para-las-industrias {
+    background-color: #d8d9dd;
+}
+
+.hero-soluciones,
+.hero-experiencia,
+.hero-formulario2 {
+    background-color: white;
+}
+
+.hero-experiencia,
+.hero-formulario2 {
+    padding-top: 3rem;
+}
+
+input[type="submit"] {
+    background-color: var(--verde);
+    border: none;
+    width: unset;
+    color: white;
+    padding: 1rem 5rem;
+    cursor: pointer;
+}
+
+.swal-wide {
+    zoom: 1.2;
+}
+
+.swal-wide ul li {
+    font-size: 13px;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.swal-wide ul li::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00d";
+    color: red;
+    position: absolute;
+    left: -20px;
+    bottom: 0px;
+    font-size: 12px;
+}
+
+.error {
+    border: 1px solid red!important;
+}
+
+.industria.interna div {
+    text-align: center;
+}
+
+.listas-soluciones ul li {
+    list-style: disc;
+}
+
+.listas-soluciones div {
+    background-color: #f0f0f0;
+    color: #06214d;
+    padding: 4rem 5rem;
+    padding-right: 0;
+    border-radius: 20px;
+    width: 75%;
+}
+
+.listas-soluciones {
+    margin: 6rem 0;
+}
+
+.industria.interna {
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.industria.interna div {
+    margin-top: 9rem;
+}
+
+@media (min-width: 1118px) {
+    .industria.interna {
+        width: 30%;
+    }
+}
+
+@media (max-width: 1117px) {
+    .industria.interna {
+        padding: 1px 64px;
+    }
+}
+
+
+/* .industria-home.industria {
+    transition: 1s all;
+}
+
+.industria-home.industria:hover {
+    transition: 1s all;
+    background-image: url(img/puertoAdministracionLogisticaTransporte2.png);
+} */
+
+.industria-home.industria {
+    position: relative;
+    transition: 1s all;
+}
+
+.industria-home.industria .fondo-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: .5s all;
+}
+
+.industria-home.industria .fondo-hover:hover {
+    opacity: 1;
+}
+
+
+/* .industria img,
+.industria h4 {
+    position: relative;
+    z-index: 10000;
+} */
+
+@media (max-width: 997px) {
+    .hero-header-nav {
+        background-color: rgb(57 57 57);
+    }
+}
+
+.home .hero-creamos-valor-para-las-industrias {
+    background-color: rgb(244, 244, 244)!important;
 }
